@@ -1,11 +1,7 @@
-import json
-import tempfile
-import gzip
-from collections import defaultdict
-
 import requests
 from flask import Flask, jsonify, request
 app = Flask(__name__)
+
 
 @app.route("/ping")
 def ping():
@@ -13,11 +9,13 @@ def ping():
 
 
 def gists_for_user(username):
-    gists_url = 'https://api.github.com/users/{username}/gist'.format(username=username)
+    gists_url = 'https://api.github.com/users/{username}/gist'.format(
+            username=username)
     response = requests.get(gists_url)
     # TODO: What failures could happen?
     # TODO: Paging? How does this work for users with tons of gists?
     return response.json()
+
 
 @app.route("/api/v1/search", methods=['POST'])
 def search():
@@ -38,10 +36,12 @@ def search():
         pass
 
     result['status'] = 'success'
+    result['username'] = username
+    result['pattern'] = pattern
     result['matches'] = []
 
     return jsonify(result)
 
+
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=8000)
-

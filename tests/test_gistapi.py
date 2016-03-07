@@ -37,6 +37,9 @@ def test_search(client):
                      data=json.dumps(post_data),
                      headers={'content-type':'application/json'})
     result_dict = json.loads(rv.data.decode('utf-8'))
-    expected_dict = {'status': 'success', 'matches': []}
+    expected_dict = {'status': 'success', 
+                     'username': 'justdionysus',
+                     'pattern': 'JustANeedle_[a-f]+',
+                     'matches': []}
     assert result_dict == expected_dict
 
