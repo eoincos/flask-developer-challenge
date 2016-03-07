@@ -1,0 +1,7 @@
+web:
+  restart: always
+  build: .
+  ports:
+    - 8000:8000
+  command: python3 -m gistapi.gistapi
+#  command: gunicorn -w 4 -b 0.0.0.0:8000 gistapi:app
