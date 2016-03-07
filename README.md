@@ -26,7 +26,6 @@ The code will be checked while running in a [Docker](https://www.docker.com/) co
 docker.  The simplest way is to use a virtualenv for development:
 
 ```bash
-    % virtualenv ./env
     ~/Projects/coding_challenge% virtualenv ./env
     New python executable in /home/dion/Projects/coding_challenge/env/bin/python
     Installing setuptools, pip, wheel...done.
