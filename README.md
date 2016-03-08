@@ -1,6 +1,6 @@
 # gistapi
-Gistapi is a simple HTTP API server implimented in Flask for searching a user's public Github Gists. The gistapi code in this repository has 
-been left incompete for you to finish.
+Gistapi is a simple HTTP API server implemented in Flask for searching a user's public Github Gists. The gistapi code in this repository has 
+been left incomplete for you to finish.
 
 ## Contents
 This project contains a [tox](https://testrun.org/tox/latest/) definition for testing against both Python 2.7 and Python 3.4.
@@ -9,8 +9,8 @@ if you'd like to run the project as a docker container.  The `tests/` directory 
 directory contains the code you'll want to modify to implement the desired features.
 
 ## Challenge
-The existing code already impliments most of the Flask boilerplate for you. The main functionality is left for you to implement.  The goal is to 
-impliment an endpoint that searches a user's Gists with a regular expression.  For example, I'd like to know all Gists for user `justdionysus` that 
+The existing code already implements most of the Flask boilerplate for you. The main functionality is left for you to implement.  The goal is to 
+implement an endpoint that searches a user's Gists with a regular expression.  For example, I'd like to know all Gists for user `justdionysus` that 
 contain the pattern `import requests`. There is also a failing test that should pass once you've successfully implemented the search 
 process (and should illustrate the expected format of the response).  The code in `gistapi.py` contains some comments to help you find your way.
 
@@ -58,7 +58,7 @@ docker.  The simplest way is to use a virtualenv for development:
     ~/Projects/coding_challenge%
 ```
 
-Testing your code can be done via tox.  No virtualenv is necessary; tox takes care of setting up a test enviornment with Python 2.7 and Python 
+Testing your code can be done via tox.  No virtualenv is necessary; tox takes care of setting up a test environment with Python 2.7 and Python 
 3.4.  Running the test is as simple as:
 
 ```bash
