@@ -22,7 +22,8 @@ finish the above quickly, feel free to investigate these added features or anyth
 don't work on the additional optional features before the main task is complete.
 
 ## Environment
-The project assumes Python 2.7 is installed and libffi and libssl development libraries are installed.
+The project assumes Python 2.7 is installed and libffi and libssl development libraries are installed.  If you plan to use tox to run the tests, 
+you should pip install tox also.  If you plan to use docker and docker-compose those will have to be installed.
 
 ## Development
 The code will be checked while running in a [Docker](https://www.docker.com/) container but there is no requirement to develop/test inside 
@@ -65,6 +66,8 @@ Testing your code can be done via tox.  No virtualenv is necessary; tox takes ca
 the test is as simple as:
 
 ```bash
+    ~/Projects/coding_challenge% sudo pip install tox
+    ...
     ~/Projects/coding_challenge% tox
     GLOB sdist-make: /home/dion/Projects/coding_challenge/setup.py
     py27 inst-nodeps: /home/dion/Projects/coding_challenge/.tox/dist/gistapi-0.1.0.zip    
