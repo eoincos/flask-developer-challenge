@@ -4,11 +4,24 @@
 #
 #    pip-compile requirements.in
 #
+cffi==1.5.2               # via cryptography
+cryptography==1.2.3       # via pyopenssl
+enum34==1.1.2             # via cryptography
 Flask==0.10.1
 gunicorn==19.4.5
+idna==2.0                 # via cryptography
+ipaddress==1.0.16         # via cryptography
 itsdangerous==0.24        # via flask
 Jinja2==2.8               # via flask
 MarkupSafe==0.23          # via jinja2
+ndg-httpsclient==0.4.0
+pyasn1==0.1.9
+pycparser==2.14           # via cffi
+pyopenssl==0.15.1
 requests==2.9.1
 six==1.10.0
 Werkzeug==0.11.4          # via flask
+
+# The following packages are commented out because they are
+# considered to be unsafe in a requirements file:
+# setuptools                # via cryptography

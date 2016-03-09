@@ -21,6 +21,9 @@ There are also a number of places in the code marked `# BONUS` where additional 
 finish the above quickly, feel free to investigate these added features or anything else you think might make for an interesting demo.  Please 
 don't work on the additional optional features before the main task is complete.
 
+## Environment
+The project assumes Python 2.7 is installed and libffi and libssl development libraries are installed.
+
 ## Development
 The code will be checked while running in a [Docker](https://www.docker.com/) container but there is no requirement to develop/test inside 
 docker.  The simplest way is to use a virtualenv for development:
@@ -58,8 +61,8 @@ docker.  The simplest way is to use a virtualenv for development:
     ~/Projects/coding_challenge%
 ```
 
-Testing your code can be done via tox.  No virtualenv is necessary; tox takes care of setting up a test environment with Python 2.7 and Python 
-3.4.  Running the test is as simple as:
+Testing your code can be done via tox.  No virtualenv is necessary; tox takes care of setting up a test environment with Python 2.7.  Running 
+the test is as simple as:
 
 ```bash
     ~/Projects/coding_challenge% tox
@@ -68,7 +71,19 @@ Testing your code can be done via tox.  No virtualenv is necessary; tox takes ca
     ...
     _______________________________________________________________________ summary ________________________________________________________________________
       py27: commands succeeded
-      py34: commands succeeded
+      congratulations :)
+    ~/Projects/coding_challenge%
+```
+
+You can check for PEP8 compliance and run a few other static analysis checks via a different tox target:
+
+```bash
+    ~Projects/coding_challenge% tox -e flake8
+    GLOB sdist-make: /home/dion/Projects/coding_challenge/setup.py
+    flake8 inst-nodeps: /home/dion/Projects/coding_challenge/.tox/dist/gistapi-0.1.0.zip
+    ...
+    _______________________________________________________________________ summary ________________________________________________________________________
+      flake8: commands succeeded
       congratulations :)
     ~/Projects/coding_challenge%
 ```
