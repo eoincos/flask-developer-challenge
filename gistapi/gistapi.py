@@ -37,7 +37,7 @@ def gists_for_user(username):
         The dict parsed from the json response from the Github API.  See
         the above URL for details of the expected structure.
     """
-    gists_url = 'https://api.github.com/users/{username}/gist'.format(
+    gists_url = 'https://api.github.com/users/{username}/gists'.format(
             username=username)
     response = requests.get(gists_url)
     # BONUS: What failures could happen?
