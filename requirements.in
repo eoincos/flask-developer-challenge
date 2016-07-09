@@ -5,3 +5,4 @@ gunicorn
 pyopenssl
 ndg-httpsclient
 pyasn1
+jsonschema
